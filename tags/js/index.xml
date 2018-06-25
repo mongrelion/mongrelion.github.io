@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Js on Carlos León</title>
+    <link>https://carlosleon.info/tags/js/</link>
+    <description>Recent content in Js on Carlos León</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 13 Sep 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://carlosleon.info/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AngularJS, Sinatra and HTML5Mode</title>
+      <link>https://carlosleon.info/blog/angular-sinatra-html5mode/</link>
+      <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/angular-sinatra-html5mode/</guid>
+      <description>Sinatra, AngularJS and HTML5Mode The Sinatra Part get &amp;quot;/*&amp;quot; do File.read(File.join(&amp;quot;public&amp;quot;, &amp;quot;index.html&amp;quot;)) end  Put this at the bottom of your application file and this will serve your AngularJS application at any endpoint. This, of course, will read the public/index.html file every time that you head that endpoint. Better if you memoize it.
+get &amp;quot;/*&amp;quot; do render_index end def render_index @index ||= File.read(File.join(&amp;quot;public&amp;quot;, &amp;quot;index.html&amp;quot;)) end  Important note Any other route that you register after this snippet won&amp;rsquo;t be triggered as &amp;quot;/*&amp;quot; matches everything.</description>
+    </item>
+    
+    <item>
+      <title>Javascript events pool</title>
+      <link>https://carlosleon.info/blog/js-events-pool/</link>
+      <pubDate>Thu, 22 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/js-events-pool/</guid>
+      <description>If you&amp;rsquo;ve lately worked with mainstream SPA frameworks (Angularjs, Emberjs, Backbonejs) and related, you should know by now that things are kept in sync thanks to data binding.
+It&amp;rsquo;s a pleasure because (with some luck) you just need to setup your bindings and views and data models would automatically be kept in sync.
+Now, if you are working with a simpler application (that may not require any framework) but you would like to have some binding still you don&amp;rsquo;t want to load any framework to your project just because you want some binding here and maybe there.</description>
+    </item>
+    
+    <item>
+      <title>Backbone.js best practices for n00bs</title>
+      <link>https://carlosleon.info/blog/backbone-js-best-practices-for-n00bs/</link>
+      <pubDate>Thu, 31 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/backbone-js-best-practices-for-n00bs/</guid>
+      <description>The other day I was looking for some Backbone.js tutorials on the internetz, something that could give me some clue about how to properly structure a web application using this framework and I found a not that old (one year and a half now) blog post talking about how to do a trivial Backbone.js application. A professor at college told me once that the best way to learn to write good code is reading good code.</description>
+    </item>
+    
+  </channel>
+</rss>

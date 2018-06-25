@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Test on Carlos León</title>
+    <link>https://carlosleon.info/tags/test/</link>
+    <description>Recent content in Test on Carlos León</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 24 May 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://carlosleon.info/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Method stub with MiniTest</title>
+      <link>https://carlosleon.info/blog/method-stub-with-minitest/</link>
+      <pubDate>Thu, 24 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/method-stub-with-minitest/</guid>
+      <description>MiniTest is a testing tool that provides the necessary resources to make your test suite a complete stack, supporting TDD, BDD, mocking and benchmarking. It comes by default with Ruby 1.9.x and is also available for Ruby 1.8.7.
+It provides two styles of testing: Unit tests and Specs. I personally prefer Specs since they are easier to read. Find out more about this on the documentation site. If you&amp;rsquo;re not yet using it, I suggest you to give it a try.</description>
+    </item>
+    
+  </channel>
+</rss>

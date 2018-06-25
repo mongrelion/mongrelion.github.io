@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bash on Carlos León</title>
+    <link>https://carlosleon.info/tags/bash/</link>
+    <description>Recent content in Bash on Carlos León</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 13 Sep 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://carlosleon.info/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cookies with cURL</title>
+      <link>https://carlosleon.info/blog/cookies-with-curl/</link>
+      <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/cookies-with-curl/</guid>
+      <description>If want to consume an API that uses sessions using cURL, then probably you will need to make use of cookies. Using cookies with cURL is pretty simple.
+I&amp;rsquo;m going to create a simple web application using [Sinatra] for the example&amp;rsquo;s sake:
+require &amp;quot;rubygems&amp;quot; require &amp;quot;sinatra&amp;quot; enable :sessions get &amp;quot;/&amp;quot; do session[:user] # Return whatever stored in session[:user]. end post &amp;quot;/&amp;quot; do session[:user] = params[:user] # Set session[:user] to whatever sent on param.</description>
+    </item>
+    
+  </channel>
+</rss>

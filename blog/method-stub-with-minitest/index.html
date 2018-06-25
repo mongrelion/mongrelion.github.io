@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Method stub with MiniTest</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MiniTest&#39;s batteries include method stubbing!">
+<meta name="generator" content="Hugo 0.20.1" />
+
+  <link href="" rel="alternate" type="application/rss+xml" title="Carlos León" />
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/hc.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+  
+    
+  </head>
+  <body>
+    <div class="nav-toggle">
+      <i class="fa fa-bars fa-2x"></i>
+      <span>X</span>
+    </div>
+
+    <div id="wrapper">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="https://carlosleon.info//"><p class="navbar-brand">Carlos León</p></a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              
+              <li>
+                <a href="/about/">About</a>
+              </li>
+              
+              <li>
+                <a href="/blog/">Blog</a>
+              </li>
+              
+              <li>
+                <a href="/talks/">Talks</a>
+              </li>
+              
+              <li>
+                <a href="/readings/">Readings</a>
+              </li>
+              
+              <li>
+                <a href="/hg/">Hang Gliding</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <img src="/img/profile.jpg" alt="Carlos León - Cloud Expert" />
+          <li class="sidebar-brand"><a href="https://carlosleon.info//"><h1 class="brand">Carlos León</h1></a><h3>Cloud Expert</h3></li>
+          <hr />
+          
+          <li>
+            <a href="/about/">About</a>
+          </li>
+          
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          
+          <li>
+            <a href="/talks/">Talks</a>
+          </li>
+          
+          <li>
+            <a href="/readings/">Readings</a>
+          </li>
+          
+          <li>
+            <a href="/hg/">Hang Gliding</a>
+          </li>
+          
+          <hr />
+          <div id="social-wrapper">
+            <li> <a href="https://twitter.com/mongrelion" target="_blank"><i class="fa fa-twitter-square"></i> @twitter</a></li>
+            <li> <a href="https://linkedin.com/in/mongrelion" target="_blank"><i class="fa fa-linkedin-square"></i> linkedin</a> </li>
+            
+            <li> <a href="https://github.com/mongrelion" target="_blank"><i class="fa fa-github-square"></i> github</a> </li>
+          </div>
+        </ul>
+      </div>
+
+      <div class="container">
+
+<div id="article">
+  <div class="article-title">Method stub with MiniTest</div>
+  <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2012-05-24</small></p>
+  <div class="tags">
+    
+    
+      <a class="tag" href="https://carlosleon.info/tags/ruby">ruby</a>
+    
+      <a class="tag" href="https://carlosleon.info/tags/test"> test</a>
+    
+      <a class="tag" href="https://carlosleon.info/tags/testing"> testing</a>
+    
+      <a class="tag" href="https://carlosleon.info/tags/minitest"> minitest</a>
+    
+  </div>
+
+  <hr/>
+
+  <div class="post">
+    <p><a href="http://github.com/seattlerb/minitest">MiniTest</a> is a testing tool that provides the necessary resources to make your
+test suite a complete stack, supporting TDD, BDD, mocking and benchmarking. It
+comes by default with Ruby 1.9.x and is also available for Ruby 1.8.7.</p>
+
+<p>It provides two styles of testing: Unit tests and Specs. I personally prefer
+Specs since they are easier to read. Find out more about this on the
+<a href="http://docs.seattlerb.org/minitest/">documentation</a> site.
+If you&rsquo;re not yet using it, I suggest you to give it a try. I have used it for
+writing unit, functional and integration tests and the results are amazing.</p>
+
+<p>But that&rsquo;s enough for the introduction of <a href="http://github.com/seattlerb/minitest">MiniTest</a> since this is more to talk
+about how to stub methods using this tool.</p>
+
+<p>So we basically have two options. The first approach is to do something like
+<a href="http://tenderlovemaking.com/">Aaron Patterson</a> (a.k.a. <a href="http://twitter.com/tenderlove">@tenderlove</a>) does on
+his <a href="http://peepcode.com">PeepCode</a>&rsquo;s <a href="https://peepcode.com/products/play-by-play-tenderlove-ruby-on-rails">screencast</a>.
+It&rsquo;s something like this:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>klass = <span style="color: #aa0000">Class</span>.new <span style="color: #aa0000">User</span> <span style="color: #0000aa">do</span>
+  define_method(<span style="color: #0000aa">:confirmed?</span>) { <span style="color: #0000aa">true</span> }
+<span style="color: #0000aa">end</span>
+user = klass.new
+user.confirmed?.must_equal <span style="color: #0000aa">true</span>
+</pre></div>
+
+<p>What he basically is doing here is redifining the <code>User</code> class and assigning that
+redefinition to the variable <code>klass</code>. Within the definition block, he is also
+redifininig the <code>confirmed?</code> instance method for that class, so that when it is
+called, it returns whatever it is inside the block given to the <code>define_method</code>
+method, which in this case is a <code>true</code> value.</p>
+
+<p>The second way to do this, which is cleaner, niftier, fancier and less complex
+is by using the MiniTest&rsquo;s stub method:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #aa0000">User</span>.stub <span style="color: #0000aa">:confirmed?</span>, <span style="color: #0000aa">true</span> <span style="color: #0000aa">do</span>
+  user = <span style="color: #aa0000">User</span>.first
+  user.confirmed?.must_equal <span style="color: #0000aa">true</span>
+<span style="color: #0000aa">end</span>
+</pre></div>
+
+<p>Clear, precise and concise. This magic was not available until version 3.0.0
+when they added support to this on this <a href="https://github.com/seattlerb/minitest/commit/37e1a04573f1047a1772a21cbfe48823d2c27d7e">commit</a>. Once again MiniTest impresses
+me by its incredible super cow powers.</p>
+
+  </div>
+</div>
+
+<ul class="pager">
+   &nbsp;<li class="previous"><a href="https://carlosleon.info/blog/backbone-js-best-practices-for-n00bs/"> Backbone.js best practices for n00bs</a></li>
+  
+</ul>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+  
+  
+  if (window.location.hostname == "localhost")
+    return;
+
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  var disqus_shortname = 'mongrelion';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</ul>
+</div>
+<footer>
+  <p class="text-muted credit">&copy; 2018. All rights reserved. </p>
+</footer>
+
+
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/hc.js" type="text/javascript"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-77086456-2', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</div>
+</div>
+</div>
+</body>
+</html>
+

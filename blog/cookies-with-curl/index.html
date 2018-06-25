@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cookies with cURL</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn how to consume APIs and keep track of sessions with cookies.">
+<meta name="generator" content="Hugo 0.20.1" />
+
+  <link href="" rel="alternate" type="application/rss+xml" title="Carlos León" />
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/hc.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+  
+    
+  </head>
+  <body>
+    <div class="nav-toggle">
+      <i class="fa fa-bars fa-2x"></i>
+      <span>X</span>
+    </div>
+
+    <div id="wrapper">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="https://carlosleon.info//"><p class="navbar-brand">Carlos León</p></a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              
+              <li>
+                <a href="/about/">About</a>
+              </li>
+              
+              <li>
+                <a href="/blog/">Blog</a>
+              </li>
+              
+              <li>
+                <a href="/talks/">Talks</a>
+              </li>
+              
+              <li>
+                <a href="/readings/">Readings</a>
+              </li>
+              
+              <li>
+                <a href="/hg/">Hang Gliding</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <img src="/img/profile.jpg" alt="Carlos León - Cloud Expert" />
+          <li class="sidebar-brand"><a href="https://carlosleon.info//"><h1 class="brand">Carlos León</h1></a><h3>Cloud Expert</h3></li>
+          <hr />
+          
+          <li>
+            <a href="/about/">About</a>
+          </li>
+          
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          
+          <li>
+            <a href="/talks/">Talks</a>
+          </li>
+          
+          <li>
+            <a href="/readings/">Readings</a>
+          </li>
+          
+          <li>
+            <a href="/hg/">Hang Gliding</a>
+          </li>
+          
+          <hr />
+          <div id="social-wrapper">
+            <li> <a href="https://twitter.com/mongrelion" target="_blank"><i class="fa fa-twitter-square"></i> @twitter</a></li>
+            <li> <a href="https://linkedin.com/in/mongrelion" target="_blank"><i class="fa fa-linkedin-square"></i> linkedin</a> </li>
+            
+            <li> <a href="https://github.com/mongrelion" target="_blank"><i class="fa fa-github-square"></i> github</a> </li>
+          </div>
+        </ul>
+      </div>
+
+      <div class="container">
+
+<div id="article">
+  <div class="article-title">Cookies with cURL</div>
+  <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2013-09-13</small></p>
+  <div class="tags">
+    
+    
+      <a class="tag" href="https://carlosleon.info/tags/unix">unix</a>
+    
+      <a class="tag" href="https://carlosleon.info/tags/bash">bash</a>
+    
+      <a class="tag" href="https://carlosleon.info/tags/curl">curl</a>
+    
+      <a class="tag" href="https://carlosleon.info/tags/api">api</a>
+    
+  </div>
+
+  <hr/>
+
+  <div class="post">
+    <p>If want to consume an API that uses sessions using <a href="http://curl.haxx.se/">cURL</a>, then probably you will need to make use of cookies. Using cookies with <a href="http://curl.haxx.se/">cURL</a> is pretty simple.</p>
+
+<p>I&rsquo;m going to create a simple web application using [Sinatra] for the example&rsquo;s sake:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #00aaaa">require</span> <span style="color: #aa5500">&quot;rubygems&quot;</span>
+<span style="color: #00aaaa">require</span> <span style="color: #aa5500">&quot;sinatra&quot;</span>
+
+enable <span style="color: #0000aa">:sessions</span>
+
+get <span style="color: #aa5500">&quot;/&quot;</span> <span style="color: #0000aa">do</span>
+  session[<span style="color: #0000aa">:user</span>] <span style="color: #aaaaaa; font-style: italic"># Return whatever stored in session[:user].</span>
+<span style="color: #0000aa">end</span>
+
+post <span style="color: #aa5500">&quot;/&quot;</span> <span style="color: #0000aa">do</span>
+  session[<span style="color: #0000aa">:user</span>] = params[<span style="color: #0000aa">:user</span>] <span style="color: #aaaaaa; font-style: italic"># Set session[:user] to whatever sent on param.</span>
+<span style="color: #0000aa">end</span>
+</pre></div>
+
+<p>Now, from console:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>$ curl -i -X POST -d <span style="color: #aa5500">&quot;name=Carlos&quot;</span> http://localhost:4567
+HTTP/1.1 <span style="color: #009999">200</span> OK
+Content-Type: text/html;<span style="color: #aa0000">charset</span>=utf-8
+Content-Length: <span style="color: #009999">10</span>
+X-XSS-Protection: <span style="color: #009999">1</span>; <span style="color: #aa0000">mode</span>=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: rack.session=BAh7CUkiD3Nlc3Npb25faWQGOgZF...; <span style="color: #aa0000">path</span>=/; HttpOnly
+Connection: keep-alive
+Server: thin <span style="color: #009999">1</span>.5.1 codename Straight Razor
+</pre></div>
+
+<ul>
+<li>The <code>-i</code> flag tells <a href="http://curl.haxx.se/">cURL</a> to include the HTTP-header in the output.<br /></li>
+<li>The <code>-X</code> flag specifies the request method (It&rsquo;s <strong>GET</strong> by default but in our case it&rsquo;s <strong>POST</strong>).<br /></li>
+<li>The <code>-d</code> flag sends the specified data in the request to the server.</li>
+</ul>
+
+<p>Notice the <strong>Set-Cookie</strong> header that the server returned: <code>rack.session=BAh7CUkiD3Nlc3Npb25faWQGOgZF...</code></p>
+
+<p>We&rsquo;re now going to perform a <strong>GET</strong> request to the server and also we&rsquo;re going to send that cookie to the server so that the server knows we&rsquo;re keeping track of the session because we care (?)</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>$ curl http://localhost:4567 -b <span style="color: #aa5500">&quot;rack.session=BAh7CUkiD3Nlc3Npb25faWQGOgZF...&quot;</span>
+Carlos
+</pre></div>
+
+<p>If we performed the same request without passing along the cookie the server wouldn&rsquo;t recognise what session we&rsquo;re talking about, so the &ldquo;name&rdquo; session key is by default unset:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>$ curl http://localhost:4567
+$
+</pre></div>
+
+<p>Pretty simple.</p>
+
+  </div>
+</div>
+
+<ul class="pager">
+   &nbsp;<li class="previous"><a href="https://carlosleon.info/blog/angular-sinatra-html5mode/"> AngularJS, Sinatra and HTML5Mode</a></li>
+   &nbsp;<li class="next"><a href="https://carlosleon.info/blog/generating-json-in-go/"> Generating JSON in Go</a></li>
+</ul>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+  
+  
+  if (window.location.hostname == "localhost")
+    return;
+
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  var disqus_shortname = 'mongrelion';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</ul>
+</div>
+<footer>
+  <p class="text-muted credit">&copy; 2018. All rights reserved. </p>
+</footer>
+
+
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/hc.js" type="text/javascript"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-77086456-2', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</div>
+</div>
+</div>
+</body>
+</html>
+

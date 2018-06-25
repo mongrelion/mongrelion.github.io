@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Improving (?) my site&#39;s performance: Part I</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Journey into tweaking my website written in Ruby">
+<meta name="generator" content="Hugo 0.20.1" />
+
+  <link href="" rel="alternate" type="application/rss+xml" title="Carlos León" />
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/hc.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+  
+    
+  </head>
+  <body>
+    <div class="nav-toggle">
+      <i class="fa fa-bars fa-2x"></i>
+      <span>X</span>
+    </div>
+
+    <div id="wrapper">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="https://carlosleon.info//"><p class="navbar-brand">Carlos León</p></a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              
+              <li>
+                <a href="/about/">About</a>
+              </li>
+              
+              <li>
+                <a href="/blog/">Blog</a>
+              </li>
+              
+              <li>
+                <a href="/talks/">Talks</a>
+              </li>
+              
+              <li>
+                <a href="/readings/">Readings</a>
+              </li>
+              
+              <li>
+                <a href="/hg/">Hang Gliding</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <img src="/img/profile.jpg" alt="Carlos León - Cloud Expert" />
+          <li class="sidebar-brand"><a href="https://carlosleon.info//"><h1 class="brand">Carlos León</h1></a><h3>Cloud Expert</h3></li>
+          <hr />
+          
+          <li>
+            <a href="/about/">About</a>
+          </li>
+          
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          
+          <li>
+            <a href="/talks/">Talks</a>
+          </li>
+          
+          <li>
+            <a href="/readings/">Readings</a>
+          </li>
+          
+          <li>
+            <a href="/hg/">Hang Gliding</a>
+          </li>
+          
+          <hr />
+          <div id="social-wrapper">
+            <li> <a href="https://twitter.com/mongrelion" target="_blank"><i class="fa fa-twitter-square"></i> @twitter</a></li>
+            <li> <a href="https://linkedin.com/in/mongrelion" target="_blank"><i class="fa fa-linkedin-square"></i> linkedin</a> </li>
+            
+            <li> <a href="https://github.com/mongrelion" target="_blank"><i class="fa fa-github-square"></i> github</a> </li>
+          </div>
+        </ul>
+      </div>
+
+      <div class="container">
+
+<div id="article">
+  <div class="article-title">Improving (?) my site&#39;s performance: Part I</div>
+  <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2013-03-24</small></p>
+  <div class="tags">
+    
+    
+      <a class="tag" href="https://carlosleon.info/tags/ruby">ruby</a>
+    
+  </div>
+
+  <hr/>
+
+  <div class="post">
+    <p>When I decided to finally come up with a blog, I gave <a href="http://jekyllrb.com">Jekyll</a> and <a href="http://octopress.org">Octopress</a>
+a try. Nice plugins, &ldquo;easy&rdquo; deployment strategies and what not, but somehow
+I could not cope with them. That&rsquo;s why I decided to write my own. At last I
+am a software developer and building a semi-static website shouldn&rsquo;t be that
+complicated.<br />
+The solution I came up with is inspired by <a href="https://github.com/cyx/cyrildavid.com">@cyx</a>&rsquo;s personal website, although
+now I seriously am thinking about refactoring a couple stuff here and there.</p>
+
+<p>First thing first: I am not a talented designer. Even though I felt quite satisfied
+with the last design I came up with, I still felt like something was wrong.
+<a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a> to the rescue. It&rsquo;s been on the market for a while. I have used
+it before in a couple projects. I am used to it. The design is quite fancy. It&rsquo;s
+responsive, blah blah blah. There are a couple shadow effects that I added to the
+site to make it a little bit fancier and a little bit more &ldquo;original&rdquo;.</p>
+
+<p>I also gave a try to <a href="http://nadarei.co/mina">Mina</a> to deploy my website to my VPS. As with <a href="http://capify.org">Capistrano</a>,
+you can run remote commands on the server side plus the ruby on your scripts
+doing any kind of magic you can spell. It even has <a href="https://github.com/nadarei/mina/tree/master/lib/mina">built-in support</a> for <a href="http://gembundler.com">Bundler</a>,
+<a href="http://ddollar.github.com/foreman">Foreman</a>, <a href="http://git-scm.com">Git</a>, <a href="http://rubyonrails.org">Rails</a>, <a href="http://rake.rubyforge.org">Rake</a>, <a href="https://github.com/sstephenson/rbenv">rbenv</a>, <a href="https://rvm.io">rvm</a> and <a href="https://github.com/javan/whenever">Whenever</a>.<br />
+Because <a href="http://capify.org">Capistrano</a> has been on the market for more time, there is a lot more
+documentation to read, although the <a href="http://nadarei.co/mina">Mina</a> documentation is very fancy, which
+makes it easier to start than with <a href="http://capify.org">Capistrano</a>, which in my opinion is a little
+bit scary to start with <a href="https://twitter.com/search?q=%23hatersgonnahate&amp;src=typd">#hatersgonnahate</a>. Also, <a href="https://github.com/capistrano/capistrano/commits/master">Capistrano</a>
+development seems to be a little more active than <a href="https://github.com/nadarei/mina/commits/master">Mina</a>.</p>
+
+<p>Another change I made to my site was to switch from <a href="http://code.macournoyer.com/thin/">Thin</a> to <a href="http://puma.io">Puma</a>. I skipped
+the benchmarks so I apologize for that. The good thing is that this change is
+already in production. Yes, this site is being served with <a href="http://wiki.nginx.org">Nginx</a> + <a href="http://puma.io">Puma</a>
+with <a href="http://www.ruby-lang.org/en/news/2013/02/24/ruby-2-0-0-p0-is-released/">ruby 2.0.0-p0</a></p>
+
+<p>I&rsquo;m also thinking about serving my site with SSL but I&rsquo;m not sure if it is completely
+necessary but should be fun and entertaining. If you have any suggestions for
+a good <strong>free</strong> SSL certificate provider, leave me a comment below.</p>
+
+<p>Last but not least, the biggest change I have in mind is to pre-load all the articles
+in memory.<br />
+When I started building my website, somebody in IRC made me realize that what we
+write in these blogs is plain text (that&rsquo;s obvious - duh!) but going beyond the
+obvious, this is not something that I don&rsquo;t do on a daily basis, and it&rsquo;s not
+something that I think is going to reach the first TB in the next couple decades.<br />
+With that in mind, I now need to decide whether or not to load in memory the
+pre-compiled version of the articles (I write these things using markdown and
+parse them using <a href="https://github.com/rtomayko/rdiscount">RDiscount</a>), as the HTML tags and extra spaces can use some more
+space in memory or compile &ldquo;en caliente&rdquo;, but pre-compiling them sounds like a
+good approach as I can get better performance out of it because I wouldn&rsquo;t need
+to compile/parse the articles for every single request.</p>
+
+<p>Again, if you have any suggestion, I&rsquo;m all ears (eyes in this case).</p>
+
+<p>I will publish another post with some more updates that I do to this site of mine.</p>
+
+  </div>
+</div>
+
+<ul class="pager">
+   &nbsp;<li class="previous"><a href="https://carlosleon.info/blog/improving-my-sites-performance-part-2/"> Improving (?) my site&#39;s performance: Part II</a></li>
+   &nbsp;<li class="next"><a href="https://carlosleon.info/blog/backbone-js-best-practices-for-n00bs/"> Backbone.js best practices for n00bs</a></li>
+</ul>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+  
+  
+  if (window.location.hostname == "localhost")
+    return;
+
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  var disqus_shortname = 'mongrelion';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</ul>
+</div>
+<footer>
+  <p class="text-muted credit">&copy; 2018. All rights reserved. </p>
+</footer>
+
+
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/hc.js" type="text/javascript"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-77086456-2', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</div>
+</div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://carlosleon.info/hg/every-sled-ride-counts/</loc>
+    <lastmod>2017-05-30T22:25:13+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/hg/first-thermal-flight-ever/</loc>
+    <lastmod>2017-05-22T23:06:10+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/hg/season-2017-is-open/</loc>
+    <lastmod>2017-05-21T21:21:42+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/about/</loc>
+    <lastmod>2017-04-12T18:21:13+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/talks/introduccion-a-los-schedulers/</loc>
+    <lastmod>2017-03-25T15:54:45+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/talks/from-dev-to-prod-in-5-minutes/</loc>
+    <lastmod>2016-11-17T15:31:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/talks/microservices-infrastructure-with-terraform-consul-and-vault/</loc>
+    <lastmod>2016-09-08T15:31:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/readings/100-an%CC%83os-de-soledad/</loc>
+    <lastmod>2016-04-13T21:25:51+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/readings/dracula/</loc>
+    <lastmod>2016-04-13T21:25:51+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/readings/el-coronel-en-su-laberinto/</loc>
+    <lastmod>2016-04-13T21:25:51+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/readings/la-puta-de-babilonia/</loc>
+    <lastmod>2016-04-13T21:25:51+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/readings/memoria-de-mis-putas-tristes/</loc>
+    <lastmod>2016-04-13T21:25:51+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/readings/vivir-para-contarla/</loc>
+    <lastmod>2016-04-13T21:25:51+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/talks/writing-your-own-terraform-provider/</loc>
+    <lastmod>2016-04-07T15:10:47+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/talks/defining-your-infrastructure-with-code/</loc>
+    <lastmod>2016-01-11T15:10:47+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/blog/calling-a-method-defined-in-another-file-in-go/</loc>
+    <lastmod>2015-09-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/blog/angular-sinatra-html5mode/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/blog/cookies-with-curl/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/blog/generating-json-in-go/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/blog/js-events-pool/</loc>
+    <lastmod>2013-08-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/blog/improving-my-sites-performance-part-2/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/blog/improving-my-sites-performance/</loc>
+    <lastmod>2013-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/blog/backbone-js-best-practices-for-n00bs/</loc>
+    <lastmod>2012-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/blog/method-stub-with-minitest/</loc>
+    <lastmod>2012-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/angular/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/angularjs/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/api/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/backbone/</loc>
+    <lastmod>2012-05-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/backbone.js/</loc>
+    <lastmod>2012-05-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/backbonejs/</loc>
+    <lastmod>2012-05-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/bash/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/blog/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/blog/</loc>
+    <lastmod>2015-09-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/</loc>
+    <lastmod>2017-05-30T22:25:13+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/coffeescript/</loc>
+    <lastmod>2012-05-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/curl/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/go/</loc>
+    <lastmod>2015-09-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/golang/</loc>
+    <lastmod>2015-09-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/gonuts/</loc>
+    <lastmod>2015-09-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/hg/</loc>
+    <lastmod>2017-05-30T22:25:13+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/html5/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/html5mode/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/javascript/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/js/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/minitest/</loc>
+    <lastmod>2012-05-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/ng/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/readings/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/readings/</loc>
+    <lastmod>2016-04-13T21:25:51+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/ruby/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/sinatra/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/talks/</loc>
+    <lastmod>2017-03-25T15:54:45+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/test/</loc>
+    <lastmod>2012-05-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/testing/</loc>
+    <lastmod>2012-05-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlosleon.info/tags/unix/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

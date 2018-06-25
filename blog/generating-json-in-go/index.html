@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Generating JSON in Go</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn how to properly generate decent JSON in Go.">
+<meta name="generator" content="Hugo 0.20.1" />
+
+  <link href="" rel="alternate" type="application/rss+xml" title="Carlos León" />
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/hc.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+  
+    
+  </head>
+  <body>
+    <div class="nav-toggle">
+      <i class="fa fa-bars fa-2x"></i>
+      <span>X</span>
+    </div>
+
+    <div id="wrapper">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="https://carlosleon.info//"><p class="navbar-brand">Carlos León</p></a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              
+              <li>
+                <a href="/about/">About</a>
+              </li>
+              
+              <li>
+                <a href="/blog/">Blog</a>
+              </li>
+              
+              <li>
+                <a href="/talks/">Talks</a>
+              </li>
+              
+              <li>
+                <a href="/readings/">Readings</a>
+              </li>
+              
+              <li>
+                <a href="/hg/">Hang Gliding</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <img src="/img/profile.jpg" alt="Carlos León - Cloud Expert" />
+          <li class="sidebar-brand"><a href="https://carlosleon.info//"><h1 class="brand">Carlos León</h1></a><h3>Cloud Expert</h3></li>
+          <hr />
+          
+          <li>
+            <a href="/about/">About</a>
+          </li>
+          
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          
+          <li>
+            <a href="/talks/">Talks</a>
+          </li>
+          
+          <li>
+            <a href="/readings/">Readings</a>
+          </li>
+          
+          <li>
+            <a href="/hg/">Hang Gliding</a>
+          </li>
+          
+          <hr />
+          <div id="social-wrapper">
+            <li> <a href="https://twitter.com/mongrelion" target="_blank"><i class="fa fa-twitter-square"></i> @twitter</a></li>
+            <li> <a href="https://linkedin.com/in/mongrelion" target="_blank"><i class="fa fa-linkedin-square"></i> linkedin</a> </li>
+            
+            <li> <a href="https://github.com/mongrelion" target="_blank"><i class="fa fa-github-square"></i> github</a> </li>
+          </div>
+        </ul>
+      </div>
+
+      <div class="container">
+
+<div id="article">
+  <div class="article-title">Generating JSON in Go</div>
+  <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2013-09-13</small></p>
+  <div class="tags">
+    
+    
+      <a class="tag" href="https://carlosleon.info/tags/go">go</a>
+    
+      <a class="tag" href="https://carlosleon.info/tags/gonuts">gonuts</a>
+    
+      <a class="tag" href="https://carlosleon.info/tags/golang">golang</a>
+    
+  </div>
+
+  <hr/>
+
+  <div class="post">
+    <p>Say you have a custom type defined like this:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #0000aa">type</span> User <span style="color: #0000aa">struct</span> {
+  id      <span style="color: #00aaaa">int</span>
+  email   <span style="color: #00aaaa">string</span>
+  age     <span style="color: #00aaaa">int</span>
+  married <span style="color: #00aaaa">bool</span>
+}
+</pre></div>
+
+<p>Using the <a href="http://golang.org/pkg/encoding/json">encoding/json</a> package from the standard library to serialise an
+instance of a <strong>User</strong> would look something like this:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #0000aa">package</span> main
+
+<span style="color: #0000aa">import</span> (
+  <span style="color: #aa5500">&quot;encoding/json&quot;</span>
+  <span style="color: #aa5500">&quot;fmt&quot;</span>
+)
+
+<span style="color: #0000aa">func</span> main() {
+  u          := User{<span style="color: #009999">1</span>, <span style="color: #aa5500">&quot;john@doe.com&quot;</span>, <span style="color: #009999">33</span>, <span style="color: #0000aa">true</span>}
+  uJSON, err := json.Marshal(u)
+  <span style="color: #0000aa">if</span> err != <span style="color: #0000aa">nil</span> {
+    fmt.Printf(<span style="color: #aa5500">&quot;Something went wrong: %s\n&quot;</span>, err)
+  } <span style="color: #0000aa">else</span> {
+    fmt.Printf(<span style="color: #aa5500">&quot;json: %s\n&quot;</span>, uJSON)
+  }
+}
+</pre></div>
+
+<p>If we run that in console we will get this output:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>$ go run example.go
+json: {}
+</pre></div>
+
+<p>Why are we getting an empty JSON? The answer is simple: Go can&rsquo;t access the fields
+<em>id, email, age and married</em> because they are not accessible from outside of the
+current scope (a.k.a. they are private). To make them public, the fields must
+start with an uppercase letter. Let&rsquo;s see:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #0000aa">package</span> main
+
+<span style="color: #0000aa">import</span> (
+  <span style="color: #aa5500">&quot;encoding/json&quot;</span>
+  <span style="color: #aa5500">&quot;fmt&quot;</span>
+)
+
+<span style="color: #0000aa">type</span> User <span style="color: #0000aa">struct</span> {
+  Id      <span style="color: #00aaaa">int</span>
+  Email   <span style="color: #00aaaa">string</span>
+  Age     <span style="color: #00aaaa">int</span>
+  Married <span style="color: #00aaaa">bool</span>
+}
+
+<span style="color: #0000aa">func</span> main() {
+  u := User{<span style="color: #009999">1</span>,<span style="color: #aa5500">&quot;jenny@doe.com&quot;</span>,<span style="color: #009999">27</span>,<span style="color: #0000aa">true</span>}
+  uJSON, err := json.Marshal(u)
+  <span style="color: #0000aa">if</span> err != <span style="color: #0000aa">nil</span> {
+    fmt.Printf(<span style="color: #aa5500">&quot;Something went wrong: %s\n&quot;</span>, err)
+  } <span style="color: #0000aa">else</span> {
+    fmt.Printf(<span style="color: #aa5500">&quot;json: %s\n&quot;</span>, uJSON)
+  }
+}
+</pre></div>
+
+<p>If we run that again in console we would get now an output like this:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>$ go run example.go
+json: {<span style="color: #aa5500">&quot;Id&quot;</span>:1,<span style="color: #aa5500">&quot;Email&quot;</span>:<span style="color: #aa5500">&quot;jenny@doe.com&quot;</span>,<span style="color: #aa5500">&quot;Age&quot;</span>:27,<span style="color: #aa5500">&quot;Married&quot;</span>:true}
+</pre></div>
+
+<p>That looks more like it. But there is this thing that doesn&rsquo;t make me feel very
+comfortable: the key names in my JSON object start also with an uppercase letter :/<br />
+Don&rsquo;t get me wrong: CamelCase is ok but not in my JSONs. Fortunately, Go offers a
+workaround for this:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #0000aa">package</span> main
+
+<span style="color: #0000aa">import</span> (
+  <span style="color: #aa5500">&quot;encoding/json&quot;</span>
+  <span style="color: #aa5500">&quot;fmt&quot;</span>
+)
+
+<span style="color: #0000aa">type</span> User <span style="color: #0000aa">struct</span> {
+  Id      <span style="color: #00aaaa">int</span>    <span style="color: #aa5500">`json:&quot;id&quot;`</span>
+  Email   <span style="color: #00aaaa">string</span> <span style="color: #aa5500">`json:&quot;email&quot;`</span>
+  Age     <span style="color: #00aaaa">int</span>    <span style="color: #aa5500">`json:&quot;age&quot;`</span>
+  Married <span style="color: #00aaaa">bool</span>   <span style="color: #aa5500">`json:&quot;married&quot;`</span>
+}
+
+<span style="color: #0000aa">func</span> main() {
+  u := User{<span style="color: #009999">1</span>,<span style="color: #aa5500">&quot;jenny@doe.com&quot;</span>,<span style="color: #009999">27</span>,<span style="color: #0000aa">true</span>}
+  uJSON, err := json.Marshal(u)
+  <span style="color: #0000aa">if</span> err != <span style="color: #0000aa">nil</span> {
+    fmt.Printf(<span style="color: #aa5500">&quot;Something went wrong: %s\n&quot;</span>, err)
+  } <span style="color: #0000aa">else</span> {
+    fmt.Printf(<span style="color: #aa5500">&quot;json: %s\n&quot;</span>, uJSON)
+  }
+}
+</pre></div>
+
+<p>Let&rsquo;s run that again in console to see what&rsquo;s up:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>$ go run example.go
+json: {<span style="color: #aa5500">&quot;id&quot;</span>:1,<span style="color: #aa5500">&quot;email&quot;</span>:<span style="color: #aa5500">&quot;jenny@doe.com&quot;</span>,<span style="color: #aa5500">&quot;age&quot;</span>:27,<span style="color: #aa5500">&quot;married&quot;</span>:true}
+</pre></div>
+
+<p>Daaaaaayyyummm, that&rsquo;s what I&rsquo;m talking about (read that with robot accent).
+You see? It&rsquo;s not as bad as we thought it would be. There are a couple more options that we can set for our fields when serialising them into JSON that they mention on the official documentation. You can check them out <a href="http://golang.org/pkg/encoding/json/#Marshal">here</a>.</p>
+
+  </div>
+</div>
+
+<ul class="pager">
+   &nbsp;<li class="previous"><a href="https://carlosleon.info/blog/cookies-with-curl/"> Cookies with cURL</a></li>
+   &nbsp;<li class="next"><a href="https://carlosleon.info/blog/js-events-pool/"> Javascript events pool</a></li>
+</ul>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+  
+  
+  if (window.location.hostname == "localhost")
+    return;
+
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  var disqus_shortname = 'mongrelion';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</ul>
+</div>
+<footer>
+  <p class="text-muted credit">&copy; 2018. All rights reserved. </p>
+</footer>
+
+
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/hc.js" type="text/javascript"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-77086456-2', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</div>
+</div>
+</div>
+</body>
+</html>
+

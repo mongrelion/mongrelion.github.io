@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talks on Carlos León</title>
+    <link>https://carlosleon.info/talks/</link>
+    <description>Recent content in Talks on Carlos León</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 25 Mar 2017 15:54:45 +0200</lastBuildDate>
+    
+	<atom:link href="https://carlosleon.info/talks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introducción a los Schedulers</title>
+      <link>https://carlosleon.info/talks/introduccion-a-los-schedulers/</link>
+      <pubDate>Sat, 25 Mar 2017 15:54:45 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/talks/introduccion-a-los-schedulers/</guid>
+      <description>  La coordinación manual de recursos es un proceso lento y propenso a fallos. El mercado ofrece diferentes tecnologías de punta para resolver este problema pero ¿cuál de todos escoger? ¿por qué? En esta charla hago una introducción a los principales sistemas de coordinación de recursos que hay en el mercado (Kubernetes, Mesos, Docker Swarm y Nomad).
+ Presented at:  ScaleConfCo 2017, Medellín, Colombia   </description>
+    </item>
+    
+    <item>
+      <title>From development to production in 5 minutes: is your company ready?</title>
+      <link>https://carlosleon.info/talks/from-dev-to-prod-in-5-minutes/</link>
+      <pubDate>Thu, 17 Nov 2016 15:31:38 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/talks/from-dev-to-prod-in-5-minutes/</guid>
+      <description>While doing my job as a consultant at Container Solutions I quickly learnt that even though companies want change, as in, they want to adopt agile softwate development methodologies, DevOps, Containers, Orchestrators, etc., they simply are not ready for such a pace. From lack of technical know-how to critical cultural challenges, they ignore what the road up ahead looks like and what they have to do to embrace these transitions.</description>
+    </item>
+    
+    <item>
+      <title>Microservices infrastructure with Terraform, Consul and Vault</title>
+      <link>https://carlosleon.info/talks/microservices-infrastructure-with-terraform-consul-and-vault/</link>
+      <pubDate>Thu, 08 Sep 2016 15:31:38 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/talks/microservices-infrastructure-with-terraform-consul-and-vault/</guid>
+      <description>  Together with Container Solutions and Cisco, we built a robust infrastructure specialised in the delivery of microservices. Three key components of this infrastructure were Terraform for building the infrastructure, Consul for service discovery and Vault for managing secrets. In this talk I explain the product we built and how it all glues together.
+ Presented at:  HashiConf 2016, Napa, California, USA  Video   Slides  </description>
+    </item>
+    
+    <item>
+      <title>Writing your own terraform provider</title>
+      <link>https://carlosleon.info/talks/writing-your-own-terraform-provider/</link>
+      <pubDate>Thu, 07 Apr 2016 15:10:47 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/talks/writing-your-own-terraform-provider/</guid>
+      <description>While working for a customer at Container Solutions I got the opportunity not only to introduce Terraform to one of their critical infrastructure processes reducing a deliverable that normally would take 2 weeks into a 30 minutes Terraform run, but also to write two Terraform providers. In this talk, preceded by a blog post about the same topic, I explain step by step why would you and how could you write your own Terraform provider.</description>
+    </item>
+    
+    <item>
+      <title>Defining your infrastructure with code</title>
+      <link>https://carlosleon.info/talks/defining-your-infrastructure-with-code/</link>
+      <pubDate>Mon, 11 Jan 2016 15:10:47 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/talks/defining-your-infrastructure-with-code/</guid>
+      <description>  A short introduction to Terraform, a tool for defining your infrastructure as code.
+ Presented at:  HashiCorp User Group Amsterdam, The Netherlands   </description>
+    </item>
+    
+  </channel>
+</rss>

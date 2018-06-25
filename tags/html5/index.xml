@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Html5 on Carlos León</title>
+    <link>https://carlosleon.info/tags/html5/</link>
+    <description>Recent content in Html5 on Carlos León</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 13 Sep 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://carlosleon.info/tags/html5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AngularJS, Sinatra and HTML5Mode</title>
+      <link>https://carlosleon.info/blog/angular-sinatra-html5mode/</link>
+      <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/angular-sinatra-html5mode/</guid>
+      <description>Sinatra, AngularJS and HTML5Mode The Sinatra Part get &amp;quot;/*&amp;quot; do File.read(File.join(&amp;quot;public&amp;quot;, &amp;quot;index.html&amp;quot;)) end  Put this at the bottom of your application file and this will serve your AngularJS application at any endpoint. This, of course, will read the public/index.html file every time that you head that endpoint. Better if you memoize it.
+get &amp;quot;/*&amp;quot; do render_index end def render_index @index ||= File.read(File.join(&amp;quot;public&amp;quot;, &amp;quot;index.html&amp;quot;)) end  Important note Any other route that you register after this snippet won&amp;rsquo;t be triggered as &amp;quot;/*&amp;quot; matches everything.</description>
+    </item>
+    
+  </channel>
+</rss>

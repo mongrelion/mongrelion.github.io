@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on Carlos León</title>
+    <link>https://carlosleon.info/tags/golang/</link>
+    <description>Recent content in Golang on Carlos León</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 03 Sep 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://carlosleon.info/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Calling a method defined in another file in Go</title>
+      <link>https://carlosleon.info/blog/calling-a-method-defined-in-another-file-in-go/</link>
+      <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/calling-a-method-defined-in-another-file-in-go/</guid>
+      <description>If you have two files in Go that look like this:
+a.go
+package main func main() { println(foo()) }  b.go
+func foo() string { return &amp;quot;Hello, foo!&amp;quot; }  If you go build . the project, it completes without errors and the binary file is generated:
+$ ls -l a.go b.go foo  And it works:
+$ ./foo Hello, foo!  But when you&amp;rsquo;re developing you want to run the project right from Go instead of compiling and then running the binary.</description>
+    </item>
+    
+    <item>
+      <title>Generating JSON in Go</title>
+      <link>https://carlosleon.info/blog/generating-json-in-go/</link>
+      <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/generating-json-in-go/</guid>
+      <description>Say you have a custom type defined like this:
+type User struct { id int email string age int married bool }  Using the encoding/json package from the standard library to serialise an instance of a User would look something like this:
+package main import ( &amp;quot;encoding/json&amp;quot; &amp;quot;fmt&amp;quot; ) func main() { u := User{1, &amp;quot;john@doe.com&amp;quot;, 33, true} uJSON, err := json.Marshal(u) if err != nil { fmt.Printf(&amp;quot;Something went wrong: %s\n&amp;quot;, err) } else { fmt.</description>
+    </item>
+    
+  </channel>
+</rss>

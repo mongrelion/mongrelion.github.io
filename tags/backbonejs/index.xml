@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backbonejs on Carlos León</title>
+    <link>https://carlosleon.info/tags/backbonejs/</link>
+    <description>Recent content in Backbonejs on Carlos León</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 31 May 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://carlosleon.info/tags/backbonejs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Backbone.js best practices for n00bs</title>
+      <link>https://carlosleon.info/blog/backbone-js-best-practices-for-n00bs/</link>
+      <pubDate>Thu, 31 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/backbone-js-best-practices-for-n00bs/</guid>
+      <description>The other day I was looking for some Backbone.js tutorials on the internetz, something that could give me some clue about how to properly structure a web application using this framework and I found a not that old (one year and a half now) blog post talking about how to do a trivial Backbone.js application. A professor at college told me once that the best way to learn to write good code is reading good code.</description>
+    </item>
+    
+  </channel>
+</rss>

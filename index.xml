@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Carlos León</title>
+    <link>https://carlosleon.info/</link>
+    <description>Recent content on Carlos León</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 30 May 2017 22:25:13 +0200</lastBuildDate>
+    
+	<atom:link href="https://carlosleon.info/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Every Sled Ride Counts</title>
+      <link>https://carlosleon.info/hg/every-sled-ride-counts/</link>
+      <pubDate>Tue, 30 May 2017 22:25:13 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/hg/every-sled-ride-counts/</guid>
+      <description>A year ago I went on my first hang gliding trip to the mountains together with the Zenith Aventura hang gliding school from Spain. We went to the French alps. We visited and flew places like Annecy, Col du Sapenay, St. Hilaire, Chamonix and some others that I can&amp;rsquo;t remember anymore.
+Back then we were just squabs about to leave the nest but not just yet. Our instructor had us throughout the whole trip doing morning and afternoon flights.</description>
+    </item>
+    
+    <item>
+      <title>First thermal flight ever!</title>
+      <link>https://carlosleon.info/hg/first-thermal-flight-ever/</link>
+      <pubDate>Mon, 22 May 2017 23:06:10 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/hg/first-thermal-flight-ever/</guid>
+      <description>I have been waiting for this moment since the very first hang gliding lessons that I took back in March 2015! I know, it&amp;rsquo;s been three seasons all together and not a single time did I get the chance or the permission from my instructors to turn a circle around some raising air.
+So far all my flights (about 80 on the winch and 20 on the mountains) had been sled riders.</description>
+    </item>
+    
+    <item>
+      <title>Cracking the season 2017 open</title>
+      <link>https://carlosleon.info/hg/season-2017-is-open/</link>
+      <pubDate>Sun, 21 May 2017 21:21:42 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/hg/season-2017-is-open/</guid>
+      <description>It&amp;rsquo;s been too long! It&amp;rsquo;s been exactly one year since my last mountain flight. Last time was a lovely 9-days trip to the French Alps with [Zenith Aventura] hang gliding school. It was my first group hang gliding expedision and boy was it fun. Unfortunately I didn&amp;rsquo;t get to fly much more after that. C&amp;rsquo;est la vie.
+Now I&amp;rsquo;m back in the game and the season has officially started for me.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://carlosleon.info/about/</link>
+      <pubDate>Wed, 12 Apr 2017 18:21:13 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/about/</guid>
+      <description>Cloud Expert &amp;amp; Public Speaker based in Amsterdam, The Netherlands.
+Moving to the cloud is a critical process that requires lots of preparation. Without the proper strategy, your project is most likely to fail.
+From the technical challenges to the cultural aspects of these transformations, I help small, medium and large organisations to create a solid plan and execute it smoothly, guaranteeing the success of your transition to the cloud!</description>
+    </item>
+    
+    <item>
+      <title>Introducción a los Schedulers</title>
+      <link>https://carlosleon.info/talks/introduccion-a-los-schedulers/</link>
+      <pubDate>Sat, 25 Mar 2017 15:54:45 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/talks/introduccion-a-los-schedulers/</guid>
+      <description>  La coordinación manual de recursos es un proceso lento y propenso a fallos. El mercado ofrece diferentes tecnologías de punta para resolver este problema pero ¿cuál de todos escoger? ¿por qué? En esta charla hago una introducción a los principales sistemas de coordinación de recursos que hay en el mercado (Kubernetes, Mesos, Docker Swarm y Nomad).
+ Presented at:  ScaleConfCo 2017, Medellín, Colombia   </description>
+    </item>
+    
+    <item>
+      <title>From development to production in 5 minutes: is your company ready?</title>
+      <link>https://carlosleon.info/talks/from-dev-to-prod-in-5-minutes/</link>
+      <pubDate>Thu, 17 Nov 2016 15:31:38 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/talks/from-dev-to-prod-in-5-minutes/</guid>
+      <description>While doing my job as a consultant at Container Solutions I quickly learnt that even though companies want change, as in, they want to adopt agile softwate development methodologies, DevOps, Containers, Orchestrators, etc., they simply are not ready for such a pace. From lack of technical know-how to critical cultural challenges, they ignore what the road up ahead looks like and what they have to do to embrace these transitions.</description>
+    </item>
+    
+    <item>
+      <title>Microservices infrastructure with Terraform, Consul and Vault</title>
+      <link>https://carlosleon.info/talks/microservices-infrastructure-with-terraform-consul-and-vault/</link>
+      <pubDate>Thu, 08 Sep 2016 15:31:38 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/talks/microservices-infrastructure-with-terraform-consul-and-vault/</guid>
+      <description>  Together with Container Solutions and Cisco, we built a robust infrastructure specialised in the delivery of microservices. Three key components of this infrastructure were Terraform for building the infrastructure, Consul for service discovery and Vault for managing secrets. In this talk I explain the product we built and how it all glues together.
+ Presented at:  HashiConf 2016, Napa, California, USA  Video   Slides  </description>
+    </item>
+    
+    <item>
+      <title>100 años de soledad</title>
+      <link>https://carlosleon.info/readings/100-an%CC%83os-de-soledad/</link>
+      <pubDate>Wed, 13 Apr 2016 21:25:51 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/readings/100-an%CC%83os-de-soledad/</guid>
+      <description>Author: Gabriel García Márquez
+Status: Finished
+ La biblia de lo que es la identidad de la Región Caribe colombiana. Sin duda alguna una lectura que llega al corazón, especialmente a aquellos que se encuentran fuera de la patria, que ven a Macondo con ojos de Macondiano pero estado afuera de ella.
+ </description>
+    </item>
+    
+    <item>
+      <title>Dracula</title>
+      <link>https://carlosleon.info/readings/dracula/</link>
+      <pubDate>Wed, 13 Apr 2016 21:25:51 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/readings/dracula/</guid>
+      <description>Author: Bram Stoker
+Status: Finished
+ A page turner, indeed. The scenes are pretty well described in my opinion. The author is pretty cautious, avoiding adding extra details to the scenes that most of the times make the reading stressing and boring. The story is told as if the reader had direct access to the protagonists&amp;rsquo; journals.
+ </description>
+    </item>
+    
+    <item>
+      <title>El coronel en su laberinto</title>
+      <link>https://carlosleon.info/readings/el-coronel-en-su-laberinto/</link>
+      <pubDate>Wed, 13 Apr 2016 21:25:51 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/readings/el-coronel-en-su-laberinto/</guid>
+      <description>Author: Gabriel García Márquez
+Status: Finished
+ Cuenta la miserable historia de Simón Bolívar en sus últimos días de agonía viendo al sueño de la Gran Colombia caerse al suelo, sus compatriotas perdidos en el poder y la patria querida cayéndose a pedazos.
+ </description>
+    </item>
+    
+    <item>
+      <title>La puta de Babilonia</title>
+      <link>https://carlosleon.info/readings/la-puta-de-babilonia/</link>
+      <pubDate>Wed, 13 Apr 2016 21:25:51 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/readings/la-puta-de-babilonia/</guid>
+      <description>Author: Fernando Vallejo
+Status: Finished
+ A mi parecer, La puta de Babilonia expone un interesante punto de vista con respecto a Iglesia Católica basado en hechos históricos reales.
+Es verdad que el libro está cargado de mucho veneno pero es verdad que así es como Vallejo escribe.
+ </description>
+    </item>
+    
+    <item>
+      <title>Memoria de mis putas tristes</title>
+      <link>https://carlosleon.info/readings/memoria-de-mis-putas-tristes/</link>
+      <pubDate>Wed, 13 Apr 2016 21:25:51 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/readings/memoria-de-mis-putas-tristes/</guid>
+      <description>Author: Gabriel García Márquez
+Status: Finished</description>
+    </item>
+    
+    <item>
+      <title>Vivir para contarla</title>
+      <link>https://carlosleon.info/readings/vivir-para-contarla/</link>
+      <pubDate>Wed, 13 Apr 2016 21:25:51 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/readings/vivir-para-contarla/</guid>
+      <description>Author: Gabriel García Márquez
+Status: Finished
+ Excelente reseña que hace Gabo con respecto a su propia vidad y en la que se puede uno dar el lujo de ver de cerca las dificultades, los tropiezos y los altibajos que la carrera del Nóbel de Literatura vive a través de su historia.
+ </description>
+    </item>
+    
+    <item>
+      <title>Writing your own terraform provider</title>
+      <link>https://carlosleon.info/talks/writing-your-own-terraform-provider/</link>
+      <pubDate>Thu, 07 Apr 2016 15:10:47 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/talks/writing-your-own-terraform-provider/</guid>
+      <description>While working for a customer at Container Solutions I got the opportunity not only to introduce Terraform to one of their critical infrastructure processes reducing a deliverable that normally would take 2 weeks into a 30 minutes Terraform run, but also to write two Terraform providers. In this talk, preceded by a blog post about the same topic, I explain step by step why would you and how could you write your own Terraform provider.</description>
+    </item>
+    
+    <item>
+      <title>Defining your infrastructure with code</title>
+      <link>https://carlosleon.info/talks/defining-your-infrastructure-with-code/</link>
+      <pubDate>Mon, 11 Jan 2016 15:10:47 +0200</pubDate>
+      
+      <guid>https://carlosleon.info/talks/defining-your-infrastructure-with-code/</guid>
+      <description>  A short introduction to Terraform, a tool for defining your infrastructure as code.
+ Presented at:  HashiCorp User Group Amsterdam, The Netherlands   </description>
+    </item>
+    
+    <item>
+      <title>Calling a method defined in another file in Go</title>
+      <link>https://carlosleon.info/blog/calling-a-method-defined-in-another-file-in-go/</link>
+      <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/calling-a-method-defined-in-another-file-in-go/</guid>
+      <description>If you have two files in Go that look like this:
+a.go
+package main func main() { println(foo()) }  b.go
+func foo() string { return &amp;quot;Hello, foo!&amp;quot; }  If you go build . the project, it completes without errors and the binary file is generated:
+$ ls -l a.go b.go foo  And it works:
+$ ./foo Hello, foo!  But when you&amp;rsquo;re developing you want to run the project right from Go instead of compiling and then running the binary.</description>
+    </item>
+    
+    <item>
+      <title>AngularJS, Sinatra and HTML5Mode</title>
+      <link>https://carlosleon.info/blog/angular-sinatra-html5mode/</link>
+      <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/angular-sinatra-html5mode/</guid>
+      <description>Sinatra, AngularJS and HTML5Mode The Sinatra Part get &amp;quot;/*&amp;quot; do File.read(File.join(&amp;quot;public&amp;quot;, &amp;quot;index.html&amp;quot;)) end  Put this at the bottom of your application file and this will serve your AngularJS application at any endpoint. This, of course, will read the public/index.html file every time that you head that endpoint. Better if you memoize it.
+get &amp;quot;/*&amp;quot; do render_index end def render_index @index ||= File.read(File.join(&amp;quot;public&amp;quot;, &amp;quot;index.html&amp;quot;)) end  Important note Any other route that you register after this snippet won&amp;rsquo;t be triggered as &amp;quot;/*&amp;quot; matches everything.</description>
+    </item>
+    
+    <item>
+      <title>Cookies with cURL</title>
+      <link>https://carlosleon.info/blog/cookies-with-curl/</link>
+      <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/cookies-with-curl/</guid>
+      <description>If want to consume an API that uses sessions using cURL, then probably you will need to make use of cookies. Using cookies with cURL is pretty simple.
+I&amp;rsquo;m going to create a simple web application using [Sinatra] for the example&amp;rsquo;s sake:
+require &amp;quot;rubygems&amp;quot; require &amp;quot;sinatra&amp;quot; enable :sessions get &amp;quot;/&amp;quot; do session[:user] # Return whatever stored in session[:user]. end post &amp;quot;/&amp;quot; do session[:user] = params[:user] # Set session[:user] to whatever sent on param.</description>
+    </item>
+    
+    <item>
+      <title>Generating JSON in Go</title>
+      <link>https://carlosleon.info/blog/generating-json-in-go/</link>
+      <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/generating-json-in-go/</guid>
+      <description>Say you have a custom type defined like this:
+type User struct { id int email string age int married bool }  Using the encoding/json package from the standard library to serialise an instance of a User would look something like this:
+package main import ( &amp;quot;encoding/json&amp;quot; &amp;quot;fmt&amp;quot; ) func main() { u := User{1, &amp;quot;john@doe.com&amp;quot;, 33, true} uJSON, err := json.Marshal(u) if err != nil { fmt.Printf(&amp;quot;Something went wrong: %s\n&amp;quot;, err) } else { fmt.</description>
+    </item>
+    
+    <item>
+      <title>Javascript events pool</title>
+      <link>https://carlosleon.info/blog/js-events-pool/</link>
+      <pubDate>Thu, 22 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/js-events-pool/</guid>
+      <description>If you&amp;rsquo;ve lately worked with mainstream SPA frameworks (Angularjs, Emberjs, Backbonejs) and related, you should know by now that things are kept in sync thanks to data binding.
+It&amp;rsquo;s a pleasure because (with some luck) you just need to setup your bindings and views and data models would automatically be kept in sync.
+Now, if you are working with a simpler application (that may not require any framework) but you would like to have some binding still you don&amp;rsquo;t want to load any framework to your project just because you want some binding here and maybe there.</description>
+    </item>
+    
+    <item>
+      <title>Improving (?) my site&#39;s performance: Part II</title>
+      <link>https://carlosleon.info/blog/improving-my-sites-performance-part-2/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/improving-my-sites-performance-part-2/</guid>
+      <description>A couple of weeks ago I decided to internally improve my website. Here I explain exactly what is it that I did to do so. Some of these changes include ruby memoize/memoization and Sinatra Caching.
+As I previously mentioned, my blog&amp;rsquo;s architechture is inspired in [@cyx]&amp;rsquo;s personal website. However, I was not totally comfortable with the fact that everytime that a page was requested (a blog post in this case), the application had to go to disk, bring the blgo post, parse the markdown and then render the view.</description>
+    </item>
+    
+    <item>
+      <title>Improving (?) my site&#39;s performance: Part I</title>
+      <link>https://carlosleon.info/blog/improving-my-sites-performance/</link>
+      <pubDate>Sun, 24 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/improving-my-sites-performance/</guid>
+      <description>When I decided to finally come up with a blog, I gave Jekyll and Octopress a try. Nice plugins, &amp;ldquo;easy&amp;rdquo; deployment strategies and what not, but somehow I could not cope with them. That&amp;rsquo;s why I decided to write my own. At last I am a software developer and building a semi-static website shouldn&amp;rsquo;t be that complicated.
+The solution I came up with is inspired by @cyx&amp;rsquo;s personal website, although now I seriously am thinking about refactoring a couple stuff here and there.</description>
+    </item>
+    
+    <item>
+      <title>Backbone.js best practices for n00bs</title>
+      <link>https://carlosleon.info/blog/backbone-js-best-practices-for-n00bs/</link>
+      <pubDate>Thu, 31 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/backbone-js-best-practices-for-n00bs/</guid>
+      <description>The other day I was looking for some Backbone.js tutorials on the internetz, something that could give me some clue about how to properly structure a web application using this framework and I found a not that old (one year and a half now) blog post talking about how to do a trivial Backbone.js application. A professor at college told me once that the best way to learn to write good code is reading good code.</description>
+    </item>
+    
+    <item>
+      <title>Method stub with MiniTest</title>
+      <link>https://carlosleon.info/blog/method-stub-with-minitest/</link>
+      <pubDate>Thu, 24 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlosleon.info/blog/method-stub-with-minitest/</guid>
+      <description>MiniTest is a testing tool that provides the necessary resources to make your test suite a complete stack, supporting TDD, BDD, mocking and benchmarking. It comes by default with Ruby 1.9.x and is also available for Ruby 1.8.7.
+It provides two styles of testing: Unit tests and Specs. I personally prefer Specs since they are easier to read. Find out more about this on the documentation site. If you&amp;rsquo;re not yet using it, I suggest you to give it a try.</description>
+    </item>
+    
+  </channel>
+</rss>
